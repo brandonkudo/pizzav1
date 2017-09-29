@@ -8,12 +8,15 @@
     <title>Pizza</title>
   </head>
   <body>
-    <div class="jumbotron">
-      <h1>Pizza</h1>
-    </div>
 
     <div class="container">
+
+      <div class="jumbotron">
+        <h1>Pizza</h1>
+      </div>
+      
       <form id="formOne">
+
         <div class="form-group">
           <label for "toppingInput">Select your toppings</label>
           <select class="form-control" id="toppingInput">
@@ -22,7 +25,24 @@
             <option>Combo</option>
           </select>
         </div>
+
+        <div class="form-group">
+          <label for "sizeInput">Select your size</label>
+          <select class="form-control" id="sizeInput">
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+          </select>
+        </div>
+
+        <button class="btn" type="submit">Order</button>
+
       </form>
+
+      <div class="well" id="well-output">
+        <span class="output"></span>
+      </div>
+
     </div>
 
 
