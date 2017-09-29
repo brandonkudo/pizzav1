@@ -34,5 +34,8 @@ $(document).ready(function() {
     var size = $("#sizeInput").val();
 
     var customPizza = new Pizza(topping, size);
+
+    $(".output").text("Your pizza costs $" + (customPizza.pizzaPrice() + customPizza.toppingPrice()));
+    $("#well-output").show();
   });
 });
