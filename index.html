@@ -11,31 +11,58 @@
 
     <div class="container">
 
-      <div class="jumbotron">
-        <h1>Pizza</h1>
+      <div class="jumbotron" id="top">
+        <h1>Brandon's Pizza</h1>
       </div>
-      
+
       <form id="formOne">
 
-        <div class="form-group">
-          <label for "toppingInput">Select your toppings</label>
-          <select class="form-control" id="toppingInput">
-            <option>Cheese</option>
-            <option>Pepperoni</option>
-            <option>Combo</option>
-          </select>
+        <div class="row">
+
+        <div class="col-md-6">
+          <div class="jumbotron">
+            <h3>Pick your cheese</h3>
+            <div class="form-group">
+              <select class="form-control" id="cheeseInput">
+                <option>None</option>
+                <option>Cheddar</option>
+                <option>Swiss</option>
+                <option>Parmesan</option>
+              </select>
+            </div>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for "sizeInput">Select your size</label>
-          <select class="form-control" id="sizeInput">
-            <option>Small</option>
-            <option>Medium</option>
-            <option>Large</option>
-          </select>
+        <div class="col-md-6">
+          <div class="jumbotron">
+            <h3>Pick your meat</h3>
+            <div class="form-group">
+              <select class="form-control" id="meatInput">
+                <option>None</option>
+                <option>Anchovies</option>
+                <option>Pepperoni</option>
+                <option>Sausage</option>
+              </select>
+            </div>
+          </div>
         </div>
 
-        <button class="btn" type="submit">Order</button>
+        </div>
+
+        <div class="jumbotron">
+          <h3>Select your size</h3>
+          <div class="form-group">
+            <select class="form-control" id="sizeInput">
+              <option>Small</option>
+              <option>Medium</option>
+              <option>Large</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="center">
+          <button class="btn btn-lg" type="submit" id="button-center">Order</button>
+        </div>
 
       </form>
 

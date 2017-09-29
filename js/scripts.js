@@ -1,5 +1,6 @@
-function Pizza(topping, size) {
-  this.pizzaTopping = topping;
+function Pizza(meat, cheese, size) {
+  this.pizzaMeat = meat,
+  this.pizzaCheese = cheese;
   this.pizzaSize = size;
 }
 
@@ -13,10 +14,20 @@ Pizza.prototype.pizzaPrice = function () {
   }
 }
 
-Pizza.prototype.toppingPrice = function () {
-  if (this.pizzaTopping === "Pepperoni") {
+Pizza.prototype.meatPrice = function () {
+  if (this.pizzaMeat === "Anchovies") {
     return 1;
-  } else if (this.pizzaTopping === "Combo") {
+  } else if (this.pizzaMeat === "Pepperoni" || this.pizzaMeat === "Sausage") {
+    return 2;
+  } else {
+    return 0;
+  }
+}
+
+Pizza.prototype.cheesePrice = function () {
+  if (this.pizzaCheese === "Cheddar") {
+    return 1;
+  } else if (this.pizzaCheese === "Parmesan" || this.pizzaCheese === "Swiss") {
     return 2;
   } else {
     return 0;
@@ -26,16 +37,16 @@ Pizza.prototype.toppingPrice = function () {
 
 
 
-
 $(document).ready(function() {
   $("form#formOne").submit(function(event) {
     event.preventDefault();
-    var topping = $("#toppingInput").val();
+    var meat = $("#meatInput").val();
+    var cheese = $("#cheeseInput").val();
     var size = $("#sizeInput").val();
 
-    var customPizza = new Pizza(topping, size);
+    var customPizza = new Pizza(meat, cheese, size);
 
-    $(".output").text("Your pizza costs $" + (customPizza.pizzaPrice() + customPizza.toppingPrice()));
+    $(".output").text("Your pizza costs $" + (customPizza.pizzaPrice() + customPizza.meatPrice() + customPizza.cheesePrice()));
     $("#well-output").show();
   });
 });
