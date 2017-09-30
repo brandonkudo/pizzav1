@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Damion');
+
 #well-output {
   margin-top: 30px;
   display: none;
-  text-align: center;
   font-size: 30px;
+  background-color: #a9d3a5;
+  text-align: center;
+  font-family: 'Damion', cursive;
 }
 
 #form-group {
@@ -11,16 +15,52 @@
 
 h1 {
   text-align: center;
+  font-family: impact;
 }
 
-h3 {
-  text-align: center;
-}
+
 
 .center {
   text-align: center;
+  font-family: impact;
+}
+
+#size {
+  color: #f28976;
+}
+
+#size:hover {
+  background-color: #f28976;
+  color: white;
 }
 
 #top {
   background-color: #f28976;
+}
+
+body {
+  background-color: #595757;
+}
+
+.btn {
+  background-color: #eaa659;
+  width: 30em;
+  font-family: impact;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #b8dee0;
+  color: black;
+}
+
+
+#toppings {
+  background-color: #cdc1dd;
+  color: white;
+}
+
+#toppings:hover {
+  background-color: white;
+  color: #cdc1dd;
 }

@@ -46,7 +46,7 @@ $(document).ready(function() {
 
     var customPizza = new Pizza(meat, cheese, size);
 
-    $(".output").text("Your pizza costs $" + (customPizza.pizzaPrice() + customPizza.meatPrice() + customPizza.cheesePrice()));
+    $(".output").text("Your pizza will cost $" + (customPizza.pizzaPrice() + customPizza.meatPrice() + customPizza.cheesePrice()));
     $("#well-output").show();
   });
 });
